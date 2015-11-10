@@ -1,0 +1,62 @@
+
+Description:
+    FSGL - Flexible Semi-Graphics Library
+
+    This library provides all the nessicary tools for constructing a 
+    higher level graphics library using low level semi-graphic raster 
+    functionality.
+
+    Provides a set of classes and interfaces for directly performing
+    2D semi-graphic operations.
+
+Features:
+    2D Semi-Graphics (Text Graphics)
+        A raster graphics like system that relies on unicode characters
+        for individual cells.
+
+        There should be the ability to write 2D buffers of 'cells' to
+        other 2D buffers and to the Screen through the GPU.
+    
+    Blending
+        The procedure to writing the 'cells' should allow combinding the
+        source and destination 'cells' in a custom manner. This is called
+        blending and should be modular.
+
+        This is done at write.
+
+    Shading
+        The ability to process 'cells' of a 2D buffer to cause certain
+        effects to appear is called Shading and should be modular.
+
+        This is done at write.
+
+Interface:
+    ----------------------------------------------------------------------
+    ----------------------------------------------------------------------
+    Color
+        Common color, either mono, 16, or 256 depening on support.
+
+    Cell
+        Contains a character, foreground, and background. Represents a
+        terminal cell.
+
+    Mosaic
+        2D buffer of Cells.
+
+    Blender
+        Blends two Cells togther, source and destination, to form a new
+        Cell.
+
+    Shader
+        Shades a Cell of a Mosaic to create a new Cell.
+
+    Target
+        Defines a universal interface for blitting
+    TargetScreen
+        Implementation of RenderTarget for a Screen.
+    TargetMosaic
+        Implementation of RenderTarget for a Mosaic.
+
+
+
+
