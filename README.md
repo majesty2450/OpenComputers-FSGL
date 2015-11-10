@@ -1,5 +1,5 @@
 # OpenComputers-FSGL
-Flexible Semi-Graphics Library (FSGL)
+Flexible Semi-Graphics Library **(FSGL)**
 
 ##Description
 This library provides all the nessicary tools for constructing a 
